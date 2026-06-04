@@ -1,0 +1,165 @@
+// @import "catppuccin-latte"
+// @import "catppuccin-frappe"
+// @import "catppuccin-macchiato"
+@import "catppuccin-mocha"
+
+* {
+    selected-active-foreground:  @background;
+    lightfg:                     @text;
+    separatorcolor:              @surface2;
+    urgent-foreground:           @red;
+
+    alternate-urgent-background: @surface0;
+    alternate-active-background: @surface1;
+    alternate-normal-background: @surface0;
+
+    lightbg:                     @mantle;
+
+    background-color:            transparent;
+    border-color:                @surface2;
+
+    normal-background:           @surface0;
+    normal-foreground:           @text;
+
+    active-background:           @surface1;
+    active-foreground:           @blue;
+
+    urgent-background:           @surface0;
+
+    selected-normal-foreground:  @base;
+    selected-normal-background:  @mauve;
+
+    selected-active-background:  @mauve;
+    selected-active-foreground:  @base;
+
+    selected-urgent-background:  @red;
+    selected-urgent-foreground:  @base;
+
+    alternate-normal-foreground: @text;
+    alternate-active-foreground: @blue;
+    alternate-urgent-foreground: @red;
+
+    background:                  @base;
+    foreground:                  @text;
+
+    spacing: 6;
+}
+
+/* ===== ELEMENT ===== */
+
+element {
+    padding: 10px;
+    spacing: 10px;
+    cursor: pointer;
+    border-radius:8;
+}
+
+/* NORMAL */
+element normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+/* URGENT */
+element normal.urgent {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+
+/* ACTIVE (HOVER) */
+element normal.active {
+    background-color: @active-background;
+    text-color: @active-foreground;
+}
+
+/* SELECTED */
+element selected.normal,
+element selected.active,
+element selected.urgent {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+/* ALTERNATE ROWS */
+element alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color: @alternate-normal-foreground;
+}
+
+element alternate.active {
+    background-color: @alternate-active-background;
+    text-color: @alternate-active-foreground;
+}
+
+element alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color: @alternate-urgent-foreground;
+}
+
+/* TEXT */
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+/* ICONS */
+element-icon {
+    background-color: transparent;
+    size: 1.05em;
+    text-color: inherit;
+}
+
+/* WINDOW (modern feel upgrade) */
+window {
+    padding: 10;
+    background-color: @base;
+    border: 1;
+    border-radius:8;
+}
+
+/* MAIN */
+mainbox {
+    padding: 6;
+}
+
+/* LIST (less cramped = modern) */
+listview {
+    padding: 4px 0px;
+    spacing: 4px;
+    scrollbar: true;
+    fixed-height: 0;
+}
+
+/* SCROLLBAR */
+scrollbar {
+    width: 4px;
+    handle-width: 6px;
+    handle-color: @surface2;
+}
+
+/* MESSAGE */
+message {
+    padding: 6px;
+    border-color: @surface2;
+}
+
+/* INPUT (more modern spacing) */
+inputbar {
+    padding: 6px;
+    spacing: 4px;
+}
+
+entry {
+    text-color: @text;
+    placeholder-color: @surface2;
+}
+
+/* BUTTONS */
+button {
+    text-color: @text;
+}
+
+button selected {
+    background-color: @mauve;
+    text-color: @base;
+}

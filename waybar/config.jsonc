@@ -1,0 +1,158 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "margin-bottom": -10,
+  "margin-right": 4,
+  "margin-left": 4,
+  "spacing": 0,
+
+  "modules-left": ["hyprland/workspaces", "sway/workspaces"],
+
+  "modules-center": ["clock"],
+
+  "modules-right": [
+    "privacy",
+    "custom/now-playing",
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "cpu",
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{icon} {windows}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "0",
+      "active": "󱓻",
+      //"active": ""
+    },
+    "window-rewrite": {
+      "class<waterfox>": "󰖟",
+      "class<brave-browser-beta>": "󰖟",
+      "class<kitty>": "",
+      "class<code>": "",
+      "class<Spotify>": "",
+      "class<obsidian>": "",
+      "class<org.kde.dolphin>": "",
+      "class<org.gnome.Evince>": "󰈦",
+      "class<com.obsproject.Studio>": "",
+      "class<mpv>": "",
+      "class<waypaper>": "󰸉",
+      "class<org.prometheus.terminal>": "",
+      "class<steam>": "",
+      "class<opennow-stable>": "󰖺",
+      "class<org.prismlauncher.PrismLauncher>": "󰍳",
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+    },
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": "",
+    "on-click": "",
+  },
+  "custom/now-playing": {
+    "exec": "",
+    "interval": 2,
+    "format": "{text}",
+    "return-type": "json",
+    "tooltip": "{tooltip}",
+  },
+
+  "clock": {
+    "format": "{:L%A %H:%M}",
+    "format-alt": "{:L%d %B W%V %Y}",
+    "tooltip": false,
+  },
+
+  "privacy": {
+    "icon-spacing": 8,
+    "icon-size": 14,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24,
+      },
+    ],
+  },
+
+  "bluetooth": {
+    "format": "󰂲",
+    "format-on": "{icon}",
+    "format-off": "{icon}",
+    "format-connected": "{icon}",
+    "format-icons": {
+      "on": "󰂯",
+      "off": "󰂲",
+      "connected": "󰂱",
+    },
+    "on-click": "prometheus-launch-bluetooth",
+    "tooltip-format": "Devices connected: {num_connections}",
+  },
+  "network": {
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)",
+    "tooltip-format-ethernet": "Connected",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "prometheus-launch-wifi",
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "on-click": "prometheus-launch-audio",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "default": ["", "", ""],
+    },
+  },
+  "backlight": {
+    "format": "{icon}",
+    "tooltip-format": "{percent} %",
+    "format-icons": ["", "󰃜", "󰃛", "󰃞", "󰃝", "󰃟", "󰃠"],
+  },
+
+  "battery": {
+    "interval": 2,
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""],
+  },
+}

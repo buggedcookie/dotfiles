@@ -1,0 +1,172 @@
+@define-color foreground #CDD6F4;
+@define-color foreground-muted #BAC2DE;
+
+@define-color background #1E1E2E;
+@define-color background-darker #181825;
+@define-color background-hover #313244;
+
+@define-color border #585B70;
+
+@define-color accent #89B4FA;
+@define-color accent-bg rgba(137,180,250,0.12);
+@define-color accent-shadow rgba(137,180,250,0.25);
+
+@define-color error #F38BA8;
+@define-color warn #F9E2AF;
+@define-color success #A6E3A1;
+
+@define-color shadow rgba(17,17,27,0.5);
+
+/* --- Global Styles --- */
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 13px;
+  font-weight: 500;
+  min-height: 0;
+  padding: 0;
+}
+
+/* --- Container --- */
+#waybar {
+  background: transparent;
+  color: @foreground;
+  margin: 0;
+}
+
+/* --- Main Blocks --- */
+#workspaces,
+#privacy {
+  background-color: @background-darker;
+  color: @foreground;
+  padding: 0.3rem 0.7rem;
+  margin: 5px 2px;
+  border-radius: 8px;
+  border: 1px solid @border;
+  transition: all 0.2s ease-in-out;
+}
+
+#clock,
+#custom-now-playing {
+  background-color: @background-darker;
+  color: @accent;
+  padding: 0.3rem 0.7rem;
+  margin: 5px 2px;
+  border-radius: 8px;
+  border: 1px solid @border;
+  transition: all 0.2s ease-in-out;
+}
+
+#bluetooth,
+#pulseaudio,
+#cpu,
+#backlight,
+#network,
+#custom-notification,
+#battery {
+  background-color: @background-darker;
+  color: @foreground;
+  padding: 0.3rem 0.7rem;
+  margin: 5px 0;
+  border-radius: 0;
+  border-top: 1px solid @border;
+  border-bottom: 1px solid @border;
+  transition: all 0.2s ease-in-out;
+}
+
+#bluetooth {
+  margin-left: 2px;
+  border-left: 1px solid @border;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#cpu {
+  margin-right: 7px;
+  border-right: 1px solid @border;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+#workspaces {
+  padding: 2px;
+  margin-left: 7px;
+  margin-right: 5px;
+}
+
+/* --- Hover --- */
+#cpu:hover,
+#clock:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#network:hover,
+#custom-lock:hover,
+#custom-notification:hover,
+#battery:hover,
+#privacy:hover {
+  background-color: @background-hover;
+  border-color: @accent;
+}
+
+/* --- Workspaces --- */
+#workspaces button {
+  color: @foreground-muted;
+  border-radius: 6px;
+  padding: 0.4rem 0.4rem;
+  background: transparent;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  box-shadow: none;
+}
+
+#workspaces button:hover {
+  color: @foreground;
+  background-color: @background-hover;
+  box-shadow: none;
+}
+
+#workspaces button.active {
+  color: @accent;
+  background-color: @accent-bg;
+  box-shadow: inset 0 0 0 1px @accent;
+}
+
+#workspaces button.empty {
+  color: @foreground-muted;
+  opacity: 0.35;
+}
+
+#workspaces button.urgent {
+  color: @background;
+  background-color: @error;
+}
+
+/* --- Status Colors --- */
+#network.disconnected {
+  color: @error;
+}
+
+#battery.warning:not(.charging) {
+  color: @warn;
+}
+
+#battery.charging {
+  color: @success;
+}
+
+#bluetooth.on,
+#bluetooth.connected {
+  color: @accent;
+}
+
+/* --- Tooltip --- */
+tooltip {
+  background-color: @background;
+  color: @foreground;
+  border-radius: 8px;
+  border: 1px solid @border;
+  padding: 8px 12px;
+  box-shadow: 0 4px 12px @shadow;
+  font-size: 12px;
+}
