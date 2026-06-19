@@ -1,4 +1,4 @@
-# Wallpapers
+# Static Wallpapers
 Astronaut Cinematic | https://4kwallpapers.com/space/astronaut-cinematic-25890.html
 
 Astronaut Ocean Swimming | https://wallpaperwaves.com/sci-fi/astronaut-swimming-in-space-matter-live-wallpaper/
@@ -40,3 +40,7 @@ Gracile | https://wallhaven.cc/w/gw2zpq
 Black Myth : Wukong | https://wallhaven.cc/w/og2yem
 
 Harish Rajan | https://wallhaven.cc/w/yqg6r7
+
+# Animated Wallpapers
+
+Sci-Fi Astronaut at Rainy Bus Stop - Lo-Fi | https://www.desktophut.com/sci-fi-astronaut-rainy-bus-stop
